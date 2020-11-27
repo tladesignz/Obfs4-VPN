@@ -13,7 +13,34 @@
 		A006DEE125713ED600213D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A006DEDF25713ED600213D3D /* Main.storyboard */; };
 		A006DEE325713ED600213D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A006DEE225713ED600213D3D /* Assets.xcassets */; };
 		A006DEE625713ED600213D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A006DEE425713ED600213D3D /* LaunchScreen.storyboard */; };
+		A0476CDD257142CD005649F3 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0476CDC257142CD005649F3 /* NetworkExtension.framework */; };
+		A0476CE0257142CD005649F3 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0476CDF257142CD005649F3 /* PacketTunnelProvider.swift */; };
+		A0476CE5257142CD005649F3 /* VPN.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A0476CDA257142CD005649F3 /* VPN.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0476CE3257142CD005649F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A006DECE25713ED600213D3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0476CD9257142CD005649F3;
+			remoteInfo = VPN;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0476CE9257142CD005649F3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A0476CE5257142CD005649F3 /* VPN.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A006DED625713ED600213D3D /* Obfs4 VPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Obfs4 VPN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +51,15 @@
 		A006DEE225713ED600213D3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A006DEE525713ED600213D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A006DEE725713ED600213D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0476CD325713FF8005649F3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A0476CD425714020005649F3 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0476CD525714064005649F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A0476CDA257142CD005649F3 /* VPN.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VPN.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0476CDC257142CD005649F3 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		A0476CDF257142CD005649F3 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		A0476CE1257142CD005649F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0476CE2257142CD005649F3 /* VPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VPN.entitlements; sourceTree = "<group>"; };
+		A0476CEE2571433F005649F3 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,13 +70,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0476CD7257142CD005649F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0476CDD257142CD005649F3 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		A006DECD25713ED600213D3D = {
 			isa = PBXGroup;
 			children = (
-				A006DED825713ED600213D3D /* Obfs4 VPN */,
+				A0476CD225713FEA005649F3 /* Build */,
+				A006DED825713ED600213D3D /* App */,
+				A0476CDE257142CD005649F3 /* VPN */,
+				A0476CDB257142CD005649F3 /* Frameworks */,
 				A006DED725713ED600213D3D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,11 +96,12 @@
 			isa = PBXGroup;
 			children = (
 				A006DED625713ED600213D3D /* Obfs4 VPN.app */,
+				A0476CDA257142CD005649F3 /* VPN.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A006DED825713ED600213D3D /* Obfs4 VPN */ = {
+		A006DED825713ED600213D3D /* App */ = {
 			isa = PBXGroup;
 			children = (
 				A006DED925713ED600213D3D /* AppDelegate.swift */,
@@ -64,7 +112,36 @@
 				A006DEE425713ED600213D3D /* LaunchScreen.storyboard */,
 				A006DEE725713ED600213D3D /* Info.plist */,
 			);
-			path = "Obfs4 VPN";
+			path = App;
+			sourceTree = "<group>";
+		};
+		A0476CD225713FEA005649F3 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				A0476CEE2571433F005649F3 /* .gitignore */,
+				A0476CD425714020005649F3 /* Podfile */,
+				A0476CD525714064005649F3 /* README.md */,
+				A0476CD325713FF8005649F3 /* LICENSE */,
+			);
+			name = Build;
+			sourceTree = "<group>";
+		};
+		A0476CDB257142CD005649F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0476CDC257142CD005649F3 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0476CDE257142CD005649F3 /* VPN */ = {
+			isa = PBXGroup;
+			children = (
+				A0476CDF257142CD005649F3 /* PacketTunnelProvider.swift */,
+				A0476CE1257142CD005649F3 /* Info.plist */,
+				A0476CE2257142CD005649F3 /* VPN.entitlements */,
+			);
+			path = VPN;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +154,34 @@
 				A006DED225713ED600213D3D /* Sources */,
 				A006DED325713ED600213D3D /* Frameworks */,
 				A006DED425713ED600213D3D /* Resources */,
+				A0476CE9257142CD005649F3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A0476CE4257142CD005649F3 /* PBXTargetDependency */,
 			);
 			name = "Obfs4 VPN";
 			productName = "Obfs4 VPN";
 			productReference = A006DED625713ED600213D3D /* Obfs4 VPN.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A0476CD9257142CD005649F3 /* VPN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0476CE6257142CD005649F3 /* Build configuration list for PBXNativeTarget "VPN" */;
+			buildPhases = (
+				A0476CD6257142CD005649F3 /* Sources */,
+				A0476CD7257142CD005649F3 /* Frameworks */,
+				A0476CD8257142CD005649F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VPN;
+			productName = VPN;
+			productReference = A0476CDA257142CD005649F3 /* VPN.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,6 +193,9 @@
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					A006DED525713ED600213D3D = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					A0476CD9257142CD005649F3 = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -115,6 +214,7 @@
 			projectRoot = "";
 			targets = (
 				A006DED525713ED600213D3D /* Obfs4 VPN */,
+				A0476CD9257142CD005649F3 /* VPN */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +227,13 @@
 				A006DEE625713ED600213D3D /* LaunchScreen.storyboard in Resources */,
 				A006DEE325713ED600213D3D /* Assets.xcassets in Resources */,
 				A006DEE125713ED600213D3D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0476CD8257142CD005649F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +250,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0476CD6257142CD005649F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0476CE0257142CD005649F3 /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0476CE4257142CD005649F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0476CD9257142CD005649F3 /* VPN */;
+			targetProxy = A0476CE3257142CD005649F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A006DEDF25713ED600213D3D /* Main.storyboard */ = {
@@ -284,10 +407,11 @@
 		A006DEEB25713ED600213D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W36S8KLY7S;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Obfs4 VPN/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,6 +419,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "foobar.Obfs4-VPN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -303,10 +428,11 @@
 		A006DEEC25713ED600213D3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W36S8KLY7S;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Obfs4 VPN/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -314,6 +440,49 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "foobar.Obfs4-VPN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A0476CE7257142CD005649F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VPN/VPN.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = VPN/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "foobar.Obfs4-VPN.VPN";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0476CE8257142CD005649F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VPN/VPN.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = VPN/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "foobar.Obfs4-VPN.VPN";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -336,6 +505,15 @@
 			buildConfigurations = (
 				A006DEEB25713ED600213D3D /* Debug */,
 				A006DEEC25713ED600213D3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0476CE6257142CD005649F3 /* Build configuration list for PBXNativeTarget "VPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0476CE7257142CD005649F3 /* Debug */,
+				A0476CE8257142CD005649F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
