@@ -12,5 +12,6 @@ end
 target 'VPN' do
   use_frameworks!
 
+  pod 'OBTun2Socks', git: 'https://github.com/tladesignz/OBTun2Socks.git'
   pod 'IPtProxy', '~> 0.5'
 end

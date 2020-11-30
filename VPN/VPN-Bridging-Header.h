@@ -3,4 +3,5 @@
 //
 
 #import "Config.h"
-//#import <Tun2socks/Tun2socks.h>
+#import <OBTun2Socks/TunnelInterface.h>
+#import <IPtProxy/IPtProxy.h>

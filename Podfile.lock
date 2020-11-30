@@ -1,16 +1,32 @@
 PODS:
+  - CocoaAsyncSocket (7.6.4)
   - IPtProxy (0.5.0)
+  - OBTun2Socks (0.1.0):
+    - CocoaAsyncSocket (~> 7.6.2)
 
 DEPENDENCIES:
   - IPtProxy (~> 0.5)
+  - OBTun2Socks (from `https://github.com/tladesignz/OBTun2Socks.git`)
 
 SPEC REPOS:
   trunk:
+    - CocoaAsyncSocket
     - IPtProxy
 
-SPEC CHECKSUMS:
-  IPtProxy: 22d0fb14aadfed82af4728d423003c5acf62a066
+EXTERNAL SOURCES:
+  OBTun2Socks:
+    :git: https://github.com/tladesignz/OBTun2Socks.git
 
-PODFILE CHECKSUM: 5418f1bd49c2ae465f6f107bf50e3cc8c2416da4
+CHECKOUT OPTIONS:
+  OBTun2Socks:
+    :commit: 1027ecbeb2f988923e472e778bb3517ed5d46279
+    :git: https://github.com/tladesignz/OBTun2Socks.git
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
+  IPtProxy: 22d0fb14aadfed82af4728d423003c5acf62a066
+  OBTun2Socks: 42657ad64c8a2a2c8f726f1d4889d5a1244394ba
+
+PODFILE CHECKSUM: 0a796c61bed525861d6be833e68c1d8af0fdca5e
 
 COCOAPODS: 1.10.0
