@@ -1,0 +1,16 @@
+PODS:
+  - IPtProxy (0.5.0)
+
+DEPENDENCIES:
+  - IPtProxy (~> 0.5)
+
+SPEC REPOS:
+  trunk:
+    - IPtProxy
+
+SPEC CHECKSUMS:
+  IPtProxy: 22d0fb14aadfed82af4728d423003c5acf62a066
+
+PODFILE CHECKSUM: 5418f1bd49c2ae465f6f107bf50e3cc8c2416da4
+
+COCOAPODS: 1.10.0
